@@ -2,17 +2,17 @@
 
 <div class="row">
     <div class="col-md-4">
-        <EditForm Model="Model.Command" OnSubmit="OnSubmitAsync">
+        <EditForm Model="Model.Command" OnValidSubmit="OnValidSubmit">
             @*<DataAnnotationsValidator />*@
             <FluentValidationValidator />
             <div class="form-group">
                 <label for="name" class="control-label">@Loc["Name"]</label>
-                <InputText id="name" @bind-Value="Model.Category.Name" Class="form-control" />
-                <ValidationMessage For="@(() => Model.Category.Name)" />
+                <InputText id="name" @bind-Value="Model.Command.Name" Class="form-control" />
+                <ValidationMessage For="@(() => Model.Command.Name)" />
             </div>
             <div class="form-group">
                 <label for="permissionSetId" class="control-label">@Loc["Permission Set"]</label>
-                <select id="permissionSetId" @bind="Model.Category.PermissionSetId" class="form-control">
+                <select id="permissionSetId" @bind="Model.Command.PermissionSetId" class="form-control">
                     @foreach (var item in Model.PermissionSets)
                     {
                         <option value="@item.Id">@item.Name</option>

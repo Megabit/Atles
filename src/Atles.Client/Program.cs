@@ -3,10 +3,17 @@ using System.Globalization;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Atles.Client.Services;
+using Atles.Data;
+using Atles.Domain.Categories.Commands;
+using Atles.Domain.Handlers.Categories.Commands;
+using Atles.Domain.Validators.Categories;
 using Atles.Models.Public;
+using FluentValidation;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using OpenCqrs.Extensions;
 using Tewr.Blazor.FileReader;
 
 namespace Atles.Client
@@ -51,6 +58,16 @@ namespace Atles.Client
             });
 
             builder.Services.AddFileReaderService(o => o.UseWasmSharedBuffer = true);
+
+            builder.Services.AddDbContext<AtlesDbContext>(options =>
+                options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Atles;Trusted_Connection=True;MultipleActiveResultSets=true"));
+
+            builder.Services.AddOpenCQRS(typeof(CreateCategoryHandler));
+
+            builder.Services.Scan(s => s
+                .FromAssembliesOf(typeof(CreateCategoryValidator))
+                .AddClasses()
+                .AsImplementedInterfaces());
 
             var host = builder.Build();
 

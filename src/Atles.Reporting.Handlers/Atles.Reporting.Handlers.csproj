@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Atles.Data.Identity\Atles.Data.Identity.csproj" />
     <ProjectReference Include="..\Atles.Data\Atles.Data.csproj" />
     <ProjectReference Include="..\Atles.Infrastructure\Atles.Infrastructure.csproj" />
     <ProjectReference Include="..\Atles.Reporting.Models\Atles.Reporting.Models.csproj" />

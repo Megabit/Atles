@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using Atles.Data;
+using Atles.Data.Identity;
 using Atles.Domain.Handlers.Categories.Commands;
 using Atles.Domain.Sites;
 using Atles.Domain.Validators.Categories;

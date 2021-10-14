@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace Atles.Data
+namespace Atles.Data.Identity
 {
     public class ApplicationDbContext : ApiAuthorizationDbContext<IdentityUser>
     {

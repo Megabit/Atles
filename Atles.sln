@@ -71,9 +71,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atles.Infrastructure", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atles.Domain.Handlers.Tests", "test\Atles.Domain.Handlers.Tests\Atles.Domain.Handlers.Tests.csproj", "{1F1263D3-B780-4049-9D8D-CAFD533CD8D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atles.Domain.Validators", "src\Atles.Domain.Validators\Atles.Domain.Validators.csproj", "{9A3ADCCE-7DCC-4EFA-9285-54692E2592AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atles.Domain.Validators", "src\Atles.Domain.Validators\Atles.Domain.Validators.csproj", "{9A3ADCCE-7DCC-4EFA-9285-54692E2592AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atles.Domain.Validators.Tests", "test\Atles.Domain.Validators.Tests\Atles.Domain.Validators.Tests.csproj", "{B3D193A6-360E-45C4-805E-747096958BAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atles.Domain.Validators.Tests", "test\Atles.Domain.Validators.Tests\Atles.Domain.Validators.Tests.csproj", "{B3D193A6-360E-45C4-805E-747096958BAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atles.Data.Identity", "src\Atles.Data.Identity\Atles.Data.Identity.csproj", "{D8F05DA2-02F2-4506-A979-7348527E35A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{B3D193A6-360E-45C4-805E-747096958BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3D193A6-360E-45C4-805E-747096958BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3D193A6-360E-45C4-805E-747096958BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8F05DA2-02F2-4506-A979-7348527E35A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8F05DA2-02F2-4506-A979-7348527E35A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8F05DA2-02F2-4506-A979-7348527E35A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8F05DA2-02F2-4506-A979-7348527E35A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -149,6 +155,7 @@ Global
 		{1F1263D3-B780-4049-9D8D-CAFD533CD8D9} = {71898E1F-3251-4DE9-AAFE-7D99540F2379}
 		{9A3ADCCE-7DCC-4EFA-9285-54692E2592AE} = {4DBC2831-6FA8-488A-89AB-7D445EFAB278}
 		{B3D193A6-360E-45C4-805E-747096958BAE} = {71898E1F-3251-4DE9-AAFE-7D99540F2379}
+		{D8F05DA2-02F2-4506-A979-7348527E35A3} = {4DBC2831-6FA8-488A-89AB-7D445EFAB278}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2747CCE7-65F1-47E8-8F5F-4598AAA8A5B9}

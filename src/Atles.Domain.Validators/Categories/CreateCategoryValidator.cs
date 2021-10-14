@@ -13,10 +13,11 @@ namespace Atles.Domain.Validators.Categories
             RuleFor(c => c.Name)
                 .NotEmpty().WithMessage("Category name is required.")
                 .Length(1, 50).WithMessage("Category name must be at least 1 and at max 50 characters long.")
-                .MustAsync((c, p, cancellation) => sender.Send(new IsCategoryNameUnique { SiteId = c.SiteId, Name = p }))
-                    .WithMessage(c => $"A category with name {c.Name} already exists.");
+            .MustAsync((c, p, cancellation) => sender.Send(new IsCategoryNameUnique { SiteId = c.SiteId, Name = p }))
+                .WithMessage(c => $"A category with name {c.Name} already exists.");
 
             RuleFor(c => c.PermissionSetId)
+                .NotEmpty().WithMessage("Permission set is required.")
                 .MustAsync((c, p, cancellation) => sender.Send(new IsPermissionSetValid { SiteId = c.SiteId, Id = p }))
                     .WithMessage(c => $"Permission set with id {c.PermissionSetId} does not exist.");
         }

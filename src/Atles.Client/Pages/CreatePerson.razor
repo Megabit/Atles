@@ -1,0 +1,57 @@
+﻿@page "/create-person"
+
+<h1>Blazored FluentValidation Sample</h1>
+
+<hr class="mb-5" />
+
+<EditForm Model="@Person" OnValidSubmit="@SubmitValidForm">
+    <FluentValidationValidator @ref="_fluentValidationValidator" />
+    <ValidationSummary />
+
+    <p>
+        <label>First Name: </label>
+        <InputText @bind-Value="@Person.FirstName" />
+        <ValidationMessage For="@(() => Person.FirstName)" />
+    </p>
+
+    <p>
+        <label>Last Name: </label>
+        <InputText @bind-Value="@Person.LastName" />
+        <ValidationMessage For="@(() => Person.LastName)" />
+    </p>
+
+    <hr />
+
+    <p>
+        <label>Age: </label>
+        <InputNumber @bind-Value="@Person.Age" />
+        <ValidationMessage For="@(() => Person.Age)" />
+    </p>
+
+    <p>
+        <label>Email Address: </label>
+        <InputText @bind-Value="@Person.EmailAddress" />
+        <ValidationMessage For="@(() => Person.EmailAddress)" />
+    </p>
+
+    <button type="submit">Save</button>
+
+</EditForm>
+<br />
+<button @onclick="PartialValidate">Partial Validation</button>
+
+@code {
+    Person Person { get; set; } = new Person();
+
+    private FluentValidationValidator _fluentValidationValidator;
+
+    void SubmitValidForm()
+    {
+        Console.WriteLine("Form Submitted Successfully!");
+    }
+
+    void PartialValidate()
+    {
+        Console.WriteLine($"Partial validation result : {_fluentValidationValidator.Validate(options => options.IncludeRuleSets("Names"))}");
+    }
+}
