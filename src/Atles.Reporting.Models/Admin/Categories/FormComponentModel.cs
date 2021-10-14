@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Atles.Domain.Categories.Commands;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -6,6 +7,7 @@ namespace Atles.Models.Admin.Categories
 {
     public class FormComponentModel
     {
+        public CreateCategory Command { get; set; } = new CreateCategory();
         public CategoryModel Category { get; set; } = new CategoryModel();
         public IList<PermissionSetModel> PermissionSets { get; set; } = new List<PermissionSetModel>();
 

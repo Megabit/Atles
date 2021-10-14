@@ -2,9 +2,9 @@
 
 <div class="row">
     <div class="col-md-4">
-        <EditForm EditContext="@EditContext" OnSubmit="OnSubmitAsync">
-            <DataAnnotationsValidator />
-            @*<FluentValidationValidator ValidatorType=typeof(Atles.Domain.Forum.Validators.CreateForumClientValidator) />*@
+        <EditForm Model="Model.Command" OnSubmit="OnSubmitAsync">
+            @*<DataAnnotationsValidator />*@
+            <FluentValidationValidator />
             <div class="form-group">
                 <label for="name" class="control-label">@Loc["Name"]</label>
                 <InputText id="name" @bind-Value="Model.Category.Name" Class="form-control" />
