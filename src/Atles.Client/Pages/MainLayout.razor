@@ -1,5 +1,9 @@
 ﻿@inherits Atles.Client.Pages.MainLayoutComponent
 
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
 <CascadingValue Value="User">
     <CascadingValue Value="Site">
         @if (Site != null)

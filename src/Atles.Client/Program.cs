@@ -7,6 +7,7 @@ using Atles.Reporting.Models.Public;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using MudBlazor.Services;
 using Tewr.Blazor.FileReader;
 
 namespace Atles.Client
@@ -32,6 +33,8 @@ namespace Atles.Client
             {
                 client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
             }).AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
+
+            builder.Services.AddMudServices();
 
             builder.Services.AddScoped<ApiService>();
 
