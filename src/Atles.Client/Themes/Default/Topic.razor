@@ -161,6 +161,9 @@ else
                                     </div>
                                 </div>
                                 <div class="card-text">@((MarkupString)reply.Content)</div>
+                                <div class="pt-3 border-top">
+                                    <LikeButtons />
+                                </div>
                             </li>
                         }
                     </ul>
@@ -173,7 +176,7 @@ else
 
         @if (CanCreateReply())
         {
-            <h5 class="mb-3">@ReplyTitleText</h5>
+            <h5 class="my-3">@ReplyTitleText</h5>
             <div class="row">
                 <div class="col-md-8">
                     <a id="reply"></a>

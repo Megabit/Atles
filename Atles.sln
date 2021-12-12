@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29728.190
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8540BC55-5403-4EE2-8D4C-E4492EE6AC4F}"
 	ProjectSection(SolutionItems) = preProject
@@ -71,9 +71,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atles.Infrastructure", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atles.Domain.Handlers.Tests", "test\Atles.Domain.Handlers.Tests\Atles.Domain.Handlers.Tests.csproj", "{1F1263D3-B780-4049-9D8D-CAFD533CD8D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atles.Domain.Validators", "src\Atles.Domain.Validators\Atles.Domain.Validators.csproj", "{9A3ADCCE-7DCC-4EFA-9285-54692E2592AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atles.Domain.Validators", "src\Atles.Domain.Validators\Atles.Domain.Validators.csproj", "{9A3ADCCE-7DCC-4EFA-9285-54692E2592AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atles.Domain.Validators.Tests", "test\Atles.Domain.Validators.Tests\Atles.Domain.Validators.Tests.csproj", "{B3D193A6-360E-45C4-805E-747096958BAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atles.Domain.Validators.Tests", "test\Atles.Domain.Validators.Tests\Atles.Domain.Validators.Tests.csproj", "{B3D193A6-360E-45C4-805E-747096958BAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

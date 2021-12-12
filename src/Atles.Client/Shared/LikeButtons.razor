@@ -1,0 +1,23 @@
+﻿<div>
+	<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@ToggleOpen">
+		@(_isOpen? "Close" : "Open")
+	</MudButton>
+	<MudPopover Open="@_isOpen" AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopCenter">
+		<div class="d-flex flex-column pa-1">
+			LIKE BUTTONS
+		</div>
+	</MudPopover>
+</div>
+
+@code {
+
+	public bool _isOpen;
+
+	public void ToggleOpen()
+	{
+		if (_isOpen)
+			_isOpen = false;
+		else
+			_isOpen = true;
+	}
+}
